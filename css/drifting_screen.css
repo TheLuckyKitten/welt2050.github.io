@@ -4,8 +4,8 @@ body {
   font-family: arial, helvetica, arial, sans-serif;
   font-size: 80%;
   color: #234163;
-  background-color: #FFFFFF;
-  margin: 2px;
+  background-color: #EEF3FA;
+  margin: 30px;
 }
 
 a {
@@ -19,7 +19,7 @@ a:hover {
 
 acronym {
   cursor: help;
-  border: 0px;
+  border-bottom: 1px dashed #AAAAAA;
 }
 
 img {
@@ -82,17 +82,30 @@ ul {
 }
 
 
-/* -- MENU CONTAINER (don't display for print) -- */
+/* -- MENU CONTAINER -- */
 
 #menuBox {
-  display: none;
+  float: left;
+  width: 15em;
+  margin: 10px 0 0 0;
+  border-right: 1px solid #5A799D;  
+  text-align: left;
+}
+
+#menuBox p {
+  margin: 5px 0 20px 2px;
+}
+
+#menuBox br {
+  margin-top: 30px;
 }
 
 
 /* -- CONTENT CONTAINER -- */
 
 #mainContent {
-  margin-top: 10px;
+  margin: 10px 0 0 16em;
+  border-left: 1px solid #5A799D;
 }
 
 #mainContent br {
@@ -103,9 +116,15 @@ ul {
   padding: 0px 5px 2px 10px;
 }
 
-.spacer{
+.spacer {
   height: 1px;
   clear: both;
+}
+
+/* Used by items meant for text only rendering */
+
+.noDisplay {
+  display: none;
 }
 
 
@@ -118,7 +137,8 @@ ul {
   letter-spacing: 0.05em;
   color: #5A799D;
   background: #EEF3FA url(../images/hdr_icon.gif) no-repeat bottom right;
-  border: 1px solid #5A799D;
+  border-top: 1px solid #5A799D;
+  border-bottom: 1px solid #5A799D;  
   display: block; 
   padding: 2px 2px 2px 10px;
   margin: 0 0 10px 0;
@@ -128,11 +148,15 @@ ul {
   border-right: 1px solid #5A799D;
 } 
 
-#menuBox h1 {
+.menuFooter, .footer {
+  margin-bottom: 0px;
+}
+
+#menuBox h1, .menuFooter {
   border-left: 1px solid #5A799D;
 }
 
-#mainContent h2 {
+#mainContent h2, #menuBox h2 {
   font-size: 80%;
   font-weight: bold;
   background-color: #EEEEEE;
@@ -153,6 +177,8 @@ ul {
   font-family: arial, helvetica, arial, sans-serif;
   font-size: 80%;
   font-weight: normal;
+  border-right: 1px solid #5A799D;
+  border-left: 0px;
 }
 
 .footer a:hover {
@@ -161,6 +187,32 @@ ul {
 
 .footer br {
   margin: -20px;
+}
+
+
+/* -- MENU/NEWS ITEM STYLES -- */
+
+.newsGroup {
+  padding: 0px 5px 0px 5px;
+  margin-bottom: 30px;
+}
+
+.menuGroup {
+  padding: 5px 0 5px 0;
+  margin-bottom: 30px;
+}
+
+.menuGroup a {
+  color: #35567C;
+  text-indent: 3em;
+  text-decoration: none;
+  margin-bottom: 2px;
+  display: block;  
+}
+
+.menuGroup a:hover {
+  color: #FFFFFF;
+  background-color: #5A799D;
 }
 
 /* -- IMAGE STYLES -- */
